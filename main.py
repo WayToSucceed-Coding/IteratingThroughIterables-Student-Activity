@@ -6,7 +6,7 @@ from tkinter import messagebox
 word_list = ["python", "development", "hangman", "challenge", "programming"]
 word = random.choice(word_list)
 guessed_letters = []
-attempts = 2 #Debug 2
+attempts = 2 
 display_word = " _ " * len(word)
 
 # Function to update the display word
@@ -14,7 +14,7 @@ def update_word_display():
     global display_word
     new_display = ""
     for i in word: 
-        if i is guessed_letters: #Debug 1
+        if i is guessed_letters: 
             new_display += ' '+i
         else:
             new_display += " _ "
@@ -24,7 +24,7 @@ def update_word_display():
 # Function to check the user's guess
 def check_guess():
     global attempts
-    guess = guess_entry.get()#Debug 3
+    guess = guess_entry.get()
 
     # Ensure the guess is a single letter and not guessed before
     if len(guess) != 1 or not guess.isalpha():
